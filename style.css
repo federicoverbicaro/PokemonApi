@@ -2,13 +2,20 @@
     padding: 0;
     box-sizing: border-box;
     margin: 0;
+    
+}
+body{
+    background-color:rgb(239,83,80) ;
 }
 
-.main{
+
+.container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 30px;
+    height: 100vh;
     
 }
 .card{
@@ -17,7 +24,8 @@
     align-items: center;
     border: 1px solid grey;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
+    background-color: white;
 }
 
 .serch{
@@ -30,47 +38,36 @@
 }
 #pokemonName{
     padding: 8px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.button{
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
 }
 
 .col-img{
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+    height: 200px;
+    width: 200px;
 }
 
 .img{
-    display: block;
-    height: 200px;
-    width: 200px;
-    
+    width: 300px;
 }
 
-/* ----------------------------------- */
-
-
-.card2{
-    margin-top: 60px;
-    padding: 10px;
-}
-#persona{
-    padding: 3px;
+.altezza{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
 }
 
-.cerca{
-    padding: 3px;
-    padding-inline: 10px;
-}
-.contatti{
+.type{
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
-}
-.contatto{
-    border: 1px solid grey;
-    padding: 8px;
-    display: flex;
-    margin-top: 10px;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    flex-basis: calc(100% / 3 - 10px);
-
+    text-transform: capitalize;
 }

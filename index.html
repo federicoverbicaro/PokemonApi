@@ -10,23 +10,58 @@
 </head>
 
 <body>
-    <div class="main">
+    <main class="main">
+        <div class="container">
 
-        <div class="card">
-            <div class="serch">
-                <input type="text" name="" id="pokemonName" placeholder="Cerca il tuo pokemon">
-                <button onclick="fetchData()">Invia</button>
+            <div class="card">
+                <div class="serch">
+                    <input type="text" name="" id="pokemonName" placeholder="Cerca il tuo pokemon">
+                    <button class="button" onclick="fetchData()">Invia</button>
+                </div>
+
+                <div>
+                    <div class="col-img">
+                        <img class="img" src="" alt="" id="pokemonSprite2">
+                    </div>
+                    <div>
+                        <h3 id="pokemonName2"></h3>
+                        <span id="NumeroPokemon"></span>
+                    </div>
+                    
+                    <div class="altezza">
+                        <div>
+                            <h4>Height</h4>
+                            <span id="heightPokemon"></span>
+                        </div>
+                        <div>
+                            <h4>Weight</h4>
+                            <span id="weightPokemon"></span>
+                        </div>
+
+                        <div>
+                            <h4>Type</h4>
+                            <div class="type">
+                                <span id="tipoPokemon"></span>
+                                <span id="tipo2Pokemon"></span>
+                                <span id="tipoNonEsiste"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Abilityes</h4>
+                            <span id="abilityPokemon"></span>
+                            <span id="ability2Pokemon"></span>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
 
-            <div class="col-img">
-                <img class="img" src="" alt="" id="pokemonSprite2">
-            </div>
         </div>
 
 
+    </main>
 
-    </div>
 
 
 
