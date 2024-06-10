@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -40,7 +44,8 @@
                     </div>
 
                     <div class="joints">
-                        <div class="joint"></div>
+                        <div class="joint_top"></div>
+                        <div class="joint_bottom"></div>
                     </div>
 
                     <div class="col_button">
@@ -53,7 +58,7 @@
                                 <hr class="hr_blu">
                             </div>
                             <div class="col_detailsPokemon">
-                                <button id="detailsPokemon">Details</button>
+                                <button id="detailsPokemon" onclick="">Pokemon</button>
                             </div>
                         </div>
 
@@ -68,39 +73,90 @@
                 </div>
 
                 <div class="card2">
+                    <div class="container-black"></div>
+
+                    <div class="NomePokemon">
+                        <h3 id="pokemonName2"></h3>
+                        <span id="NumeroPokemon"></span>
+                    </div>
+
                     <div class="dettagliPokemo">
-
-                        <div>
-                            <h3 id="pokemonName2"></h3>
-                            <span id="NumeroPokemon"></span>
-                        </div>
-
-                        <div class="altezza">
-                            <div>
-                                <h4>Height</h4>
-                                <span id="heightPokemon"></span>
-                            </div>
-                            <div>
-                                <h4>Weight</h4>
-                                <span id="weightPokemon"></span>
-                            </div>
-
-                            <div>
-                                <h4>Type</h4>
-                                <div class="type">
-                                    <span id="tipoPokemon"></span>
-                                    <span id="tipo2Pokemon"></span>
-                                    <span id="tipoNonEsiste"></span>
+                        <div class="bg-gray">
+                            <div class="altezza">
+                                <div class="spazio bg-greyChiaro">
+                                    <h4 class="grigio-antracite">Height</h4>
+                                    <span id="heightPokemon"></span>
                                 </div>
-                            </div>
-                            <div>
-                                <h4>Abilityes</h4>
-                                <span id="abilityPokemon"></span>
-                                <span id="ability2Pokemon"></span>
-                            </div>
+                                <div class="spazio bg-greyChiaro">
+                                    <h4 class="grigio-antracite">Weight</h4>
+                                    <span id="weightPokemon"></span>
+                                </div>
 
+                                <div class="spazio">
+                                    <h4 class="grigio-antracite">Type</h4>
+                                    <div class="type">
+                                        <span class="blu-desaturato" id="tipoPokemon"></span>
+                                        <span class="lavanda-desaturato" id="tipo2Pokemon"></span>
+                                        <span id="tipoNonEsiste"></span>
+                                    </div>
+                                </div>
+                                <div class="spazio">
+                                    <h4 class="grigio-antracite">Abilityes</h4>
+                                    <span class="verde-grigio" id="abilityPokemon"></span>
+                                    <span class="blu-grigio-chiaro" id="ability2Pokemon"></span>
+                                </div>
+
+
+                            </div>
+                            <div class="stats">
+                                <div class="hp">
+                                    <span>HP</span>
+                                    <span id="hp"></span>
+                                </div>
+                                <div class="att">
+                                    <span>ATT</span>
+                                    <span id="att"></span>
+                                </div>
+                                <div class="dif">
+                                    <span>DIF</span>
+                                    <span id="dif"></span>
+                                </div>
+                                <div class="atk">
+                                    <span>ATK</span>
+                                    <span id="atk"></span>
+                                </div>
+                                <div class="def">
+                                    <span>DEF</span>
+                                    <span id="def"></span>
+                                </div>
+
+                                <div class="vel">
+                                    <span>VEL</span>
+                                    <span id="vel"></span>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
+                    <div class="col-white">
+
+                        <div class="col-white2">
+                            <div class="container-white"></div>
+                            <div class="container-white"></div>
+                        </div>
+
+                        <div class="pointYellow"></div>
+                    </div>
+
+                    <div class="col_black">
+                        <div class="container-black2"></div>
+                        <div class="container-black2"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pokedex">
+                <div>
 
                 </div>
             </div>
