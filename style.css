@@ -131,7 +131,14 @@ h4{
     border: 1px solid black;
     border-radius: 100%;
 }
+.save{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 30px;
 
+}
 .line_hr {
     width: 80px;
     display: flex;
@@ -389,20 +396,36 @@ hr {
     justify-content: center;
     padding: 10px;
 }
-.container-pokedex{
+#container-pokedex{
     border: 1px solid black;
     height: 620px;
     margin: 15px;
     background-color: #e8b7a6;
     padding: 10px;
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
+    overflow-y: scroll
 
 }
 .card_pokemon{
-    height: 190px;
-    width: 190px;
+    height: 180px;
+    width: 160px;
     background-color: white;
     border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: calc(100% / 4 - 5px);
+}
+.card_pokemon button{
+    background-color: red;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 5px;
+    margin-top: 3px;
+    
 }

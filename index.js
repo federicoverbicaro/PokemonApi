@@ -110,9 +110,8 @@ async function fetchData() {
         const velocita = data.stats[5].base_stat
         vel.textContent = velocita
 
-
+        localStorage.setItem('currentPokemon', JSON.stringify(data));
         console.log('datiarray', data)
-        console.log(vita)
     }
     catch (error) {
         console.error(error);
@@ -129,6 +128,84 @@ function togglePokedex() {
         pokedex.style.display = 'none';
     }
 
-    
+
+}
+
+
+function savePokemon() {
+    try {
+        const currentPokemon = JSON.parse(localStorage.getItem('currentPokemon'));
+
+        console.log("Dati correnti del Pokémon:", currentPokemon);
+        if (!currentPokemon) {
+            throw new Error('Nessun Pokémon da salvare. Effettua una ricerca prima di salvare.');
+        }
+
+        let savedPokemon = JSON.parse(localStorage.getItem('savedPokemon')) || [];
+
+        const isAlreadySaved = savedPokemon.some(pokemon => pokemon.id === currentPokemon.id);
+        
+        if (!isAlreadySaved) {
+            savedPokemon.push(currentPokemon);
+            localStorage.setItem('savedPokemon', JSON.stringify(savedPokemon));
+            
+        } else {
+            alert('Questo Pokémon è già stato salvato!');
+        }
+        loadPokedex();
+    } catch (error) {
+        console.error('Errore nel salvataggio dei dati del Pokémon:', error);
+    }
+}
+
+async function loadPokedex() {
+    try {
+        const savedPokemon = JSON.parse(localStorage.getItem('savedPokemon')) || [];
+
+        const pokedexContainer = document.getElementById('container-pokedex');
+
+        while (pokedexContainer.firstChild) {
+            pokedexContainer.removeChild(pokedexContainer.firstChild);
+        }
+
+
+        if (Array.isArray(savedPokemon) && savedPokemon.length > 0) {
+            savedPokemon.forEach((pokemon, index) => {
+                const div = document.createElement('div');
+                div.classList.add('card_pokemon');
+                div.innerHTML = `
+                    <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+                    <p>${pokemon.name} #${pokemon.id}</p>
+                    <button onclick="deletePokemon(${index})">Elimina</button>
+                `;
+                pokedexContainer.appendChild(div);
+            });
+        } else {
+            console.log('Nessun Pokémon salvato o dati salvati non validi.');
+        }
+    } catch (error) {
+        console.error('Errore nel caricamento dei dati del Pokedex:', error);
+    }
+}
+
+function deletePokemon(index) {
+    try {
+        let savedPokemon = JSON.parse(localStorage.getItem('savedPokemon')) || [];
+        // Assicurati che savedPokemon sia un array
+        if (!Array.isArray(savedPokemon)) {
+            savedPokemon = [];
+        }
+        // Rimuovi il Pokémon dall'array in base all'indice fornito
+        savedPokemon.splice(index, 1);
+        // Aggiorna il localStorage con l'array modificato
+        localStorage.setItem('savedPokemon', JSON.stringify(savedPokemon));
+
+        const pokedexContainer = document.getElementById('container-pokedex');
+        pokedexContainer.removeChild(pokedexContainer.childNodes[index]);
+
+        loadPokedex(); // Aggiorna il Pokedex dopo aver eliminato il Pokémon
+    } catch (error) {
+        console.error(`Errore durante l'eliminazione del Pokémon:`, error);
+    }
 }
 
