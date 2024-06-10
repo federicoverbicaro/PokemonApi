@@ -1,73 +1,220 @@
-*{
+* {
     padding: 0;
     box-sizing: border-box;
     margin: 0;
-    
+
 }
-body{
-    background-color:rgb(239,83,80) ;
+
+body {
+    background-image: url('./img/7171b7eeec7255a80ef12c227fda3e4a483adcad_s2_n2_y2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
-.container{
+.container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
     height: 100vh;
-    
+
 }
-.card{
+
+.col {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid grey;
     border-radius: 20px;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(239, 83, 80);
+    position: relative;
 }
 
-.serch{
+.serch {
     display: flex;
     gap: 10px;
     flex-direction: column;
     justify-content: center;
     width: 300px;
-    
+
 }
-#pokemonName{
+
+.dettagliPokemo {
+    background-color: white;
+    width: 40%;
+}
+
+#pokemonName {
     padding: 8px;
     border-radius: 10px;
     border: 1px solid grey;
 }
-.button{
+
+.button {
     padding: 8px;
     border-radius: 10px;
     border: none;
 }
 
-.col-img{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-
-    height: 200px;
-    width: 200px;
+.container_img {
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
 }
 
-.img{
+.pointsContainer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.pointRed {
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.col-img {
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+    height: 200px;
+    width: 250px;
+
+}
+
+.img {
     width: 300px;
 }
 
-.altezza{
+.pointsContainer2 {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pointRed2 {
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.line_hr {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+hr {
+    height: 5px;
+    border-radius: 30px;
+    background-color: gray;
+}
+
+.altezza {
     display: flex;
     gap: 20px;
     flex-direction: column;
+
 }
 
-.type{
+.type {
     display: flex;
     gap: 10px;
     text-transform: capitalize;
+}
+
+.col_button {
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pointBlack {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 100%;
+}
+
+.flex_hr {
+    display: flex;
+    gap: 5px;
+
+}
+
+.hr_red {
+    width: 50px;
+    background-color: red;
+    border: 1px solid black;
+}
+
+.hr_blu {
+    width: 50px;
+    background-color: rgb(0, 165, 155);
+    border: 1px solid black;
+}
+
+.col_detailsPokemon {
+    display: flex;
+    justify-content: center;
+
+}
+
+#detailsPokemon {
+    height: 50px;
+    width: 80px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(57, 181, 74);
+    color: white;
+}
+
+/* giuntura delle due carte */
+
+.joints {
+    height: 325px;
+    width: 30px;
+    background-color: rgb(239, 83, 80);
+    border: 1px solid black;
+    position: absolute;
+    left: 324px;
+    bottom: -1px;
+    border-radius: 8px;
+
+}
+
+.joint {
+    height: 40px;
+    width: 29px;
+    background-color: rgb(239, 83, 80);
+    border: 1px solid black;
+
+}
+
+/* contenitore 2 pokedex */
+
+.card2 {
+    display: flex;
+    justify-content: end;
+    height: 325px;
+    width: 250px;
+    background-color: rgb(239, 83, 80);
 }
