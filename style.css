@@ -23,6 +23,7 @@ h4{
     justify-content: center;
     margin-top: 30px;
     height: 100vh;
+    position: relative;
 
 }
 
@@ -119,6 +120,8 @@ h4{
     padding: 5px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
 }
 
 .pointRed2 {
@@ -368,8 +371,38 @@ hr {
 
 /* pokemon trovati */
 
-.pokedex{
+#pokedex{
     height: 700px;
     width: 700px;
     background-color: white;
+    border-radius: 30px;
+    display: none;
+    position: absolute;
+    left: 55%;
+    background-color: rgb(239,83,80);
+}
+
+
+/* pokedex (i tuoi pokemon) */
+.titolo-pokemon{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.container-pokedex{
+    border: 1px solid black;
+    height: 620px;
+    margin: 15px;
+    background-color: #e8b7a6;
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+
+}
+.card_pokemon{
+    height: 190px;
+    width: 190px;
+    background-color: white;
+    border-radius: 40px;
 }
