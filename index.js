@@ -178,34 +178,34 @@ async function loadPokedex() {
                     <p>${pokemon.name} #${pokemon.id}</p>
                     <button onclick="deletePokemon(${index})">Elimina</button>
                 `;
-                pokedexContainer.appendChild(div);
+                pokedexContainer.appendChild(div)
             });
         } else {
             console.log('Nessun Pokémon salvato o dati salvati non validi.');
         }
     } catch (error) {
-        console.error('Errore nel caricamento dei dati del Pokedex:', error);
+        console.error('Errore nel caricamento dei dati del Pokedex:', error)
     }
 }
 
 function deletePokemon(index) {
     try {
-        let savedPokemon = JSON.parse(localStorage.getItem('savedPokemon')) || [];
-        // Assicurati che savedPokemon sia un array
+        let savedPokemon = JSON.parse(localStorage.getItem('savedPokemon')) || []
+        
         if (!Array.isArray(savedPokemon)) {
-            savedPokemon = [];
+            savedPokemon = []
         }
-        // Rimuovi il Pokémon dall'array in base all'indice fornito
-        savedPokemon.splice(index, 1);
-        // Aggiorna il localStorage con l'array modificato
-        localStorage.setItem('savedPokemon', JSON.stringify(savedPokemon));
+        
+        savedPokemon.splice(index, 1)
+        
+        localStorage.setItem('savedPokemon', JSON.stringify(savedPokemon))
 
-        const pokedexContainer = document.getElementById('container-pokedex');
-        pokedexContainer.removeChild(pokedexContainer.childNodes[index]);
+        const pokedexContainer = document.getElementById('container-pokedex')
+        pokedexContainer.removeChild(pokedexContainer.childNodes[index])
 
-        loadPokedex(); // Aggiorna il Pokedex dopo aver eliminato il Pokémon
+        loadPokedex()
     } catch (error) {
-        console.error(`Errore durante l'eliminazione del Pokémon:`, error);
+        console.error(`Errore durante l'eliminazione del Pokémon:`, error)
     }
 }
 
